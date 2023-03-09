@@ -25,18 +25,113 @@
                 <div class="col-md-12 right">
                     <ul>
                         <li id="cmnFunc">
-                            <div> <span class="text"> Affirm Links </span>
+                            <div>
+                                <span class="text"> Affirm Links </span>
                                 <span class="function">
                                     <pre class="line-numbers"><code class="language-javascript">Documentation   <a href="https://docs.affirm.com/platforms/docs/platforms-quickstart">https://docs.affirm.com/platforms/docs/platforms-quickstart</a>
 Dashboard       <a
                                             href="https://sandbox.affirm.com/dashboard/home">https://sandbox.affirm.com/dashboard/home</a>
 API Details     <a href="https://sandbox.affirm.com/dashboard/apikeys">https://sandbox.affirm.com/dashboard/apikeys</a>
+                             
+                            ********
+                Use Below Details For Testing Purpose
+                            ********
+Temp Number     202-555-0108
+OTP             1234
 </code> 
 </pre>
                                 </span>
                             </div>
                         </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text"> JavaScript Code </span>
+                                <span class="function">
+                                    <pre class="line-numbers">
+<code class="language-javascript">
+                    ********
+            Required jQuery For This Code
+                    ********
 
+$(document).ready(function () {
+    _affirm_config = {
+        public_api_key: "Your Api Key",
+        script: "https://cdn1-sandbox.affirm.com/js/v2/affirm.js"
+    };
+    (function (m, g, n, d, a, e, h, c) {
+        var b = m[n] || {},
+            k = document.createElement(e),
+            p = document.getElementsByTagName(e)[0],
+            l = function (a, b, c) {
+                return function () {
+                    a[b]._.push([c, arguments])
+                }
+            };
+        b[d] = l(b, d, "set");
+        var f = b[d];
+        b[a] = {};
+        b[a]._ = [];
+        f._ = [];
+        b._ = [];
+        b[a][h] = l(b, a, h);
+        b[c] = function () {
+            b._.push([h, arguments])
+        };
+        a = 0;
+        for (c = "set add save post open empty reset on off trigger ready setProduct".split(" "); a < c.length; a++) f[c[a]] = l(b, d, c[a]);
+        a = 0;
+        for (c = ["get", "token", "url", "items"]; a < c.length; a++) f[c[a]] = function () { };
+        k.async = !0;
+        k.src = g[e];
+        p.parentNode.insertBefore(k, p);
+        delete g[e];
+        f(g);
+        m[n] = b
+    })(window, _affirm_config, "affirm", "checkout", "ui", "script", "ready", "jsReady");
+    var data = {
+        "merchant": {
+            "user_confirmation_url": "Your Confirmation Url Where Page Redirected After Payment Confirm",
+            "user_cancel_url": "Your Cancel Url Where Page Redirected After Payment Cancel",
+            "user_confirmation_url_action": "POST",
+            "name": "Name Your Site / Company"
+        },
+        "shipping": {
+            "name": {
+                "first": User First Name,
+                "last": User Last Name
+            },
+            "address": {
+                "line1": User House Number,
+                "line2": User Street,
+                "city": User City,
+                "state": User State,
+                "zipcode": User Zip,
+                "country": "USA"
+            },
+            "phone_number": User Phone,
+            "email": User Email
+        },
+        "items": [{
+            "display_name": "Displayed Name Of Item",
+            "sku": Sku Of Item,
+            "unit_price": Unit Price Of Item,
+            "qty": Quantity Of Item
+        }],
+        "currency": "USD",
+       'shipping_amount': Shipping Amount Of Item,
+       'tax_amount': Tax Amount Of Item,
+        "total": Total Amount Of Item
+    };
+    $("Button Id Or Class").click(function (e) {
+        affirm.checkout(data);
+        affirm.checkout.open();
+    });
+});
+</code> 
+                        </pre>
+                                </span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
