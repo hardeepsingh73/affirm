@@ -33,6 +33,7 @@ body {
 .wordpressFunctionAP ul li div span.text {
     margin-bottom: 15px;
     font-weight: bold;
+    position: relative;
 }
 
 /* width */
@@ -87,4 +88,12 @@ body {
 
 .right li {
     scroll-margin-top: 10px;
+}
+
+img.copy {
+    position: absolute;
+    width: 20px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
