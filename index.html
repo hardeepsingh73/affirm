@@ -171,7 +171,7 @@ CURLOPT_FOLLOWLOCATION => true,
 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 CURLOPT_CUSTOMREQUEST => 'POST',
 CURLOPT_POSTFIELDS =>'{ "transaction_id":"'.$checkout_token.'" }',
-CURLOPT_HTTPHEADER => array('Content-Type: application/json','Authorization: Basic WjJFMkZHMFk1VFQwVk5JWDpCSDJHQ2FLTndQUDVkdkxvQmdtT2NIalJWWHFPWFlJRQ==','Cookie: 3060738.3440491=1b23936a-a298-427f-bf96-68ae317affac; affirm-csrf-token=555bff4c-cd71-40f4-c03f-433d9827cf73;t_v2_s=eyIgYiI6Ik1XSXlNemt6Tm1FdFlUSTVPQzAwTWpkbUxXSm1PVFl0TmpoaFpUTXhOMkZtWm1GaiJ9.FrpxDQ.tZA8EPMUEdNgm_tmv9gE_-zeUYc;tracker_device=1b23936a-a298-427f-bf96-68ae317affac'),
+CURLOPT_HTTPHEADER => array('Content-Type: application/json','Authorization: Basic {public_api_key}:{private_api_key}==','Cookie: 3060738.3440491=1b23936a-a298-427f-bf96-68ae317affac; affirm-csrf-token=555bff4c-cd71-40f4-c03f-433d9827cf73;t_v2_s=eyIgYiI6Ik1XSXlNemt6Tm1FdFlUSTVPQzAwTWpkbUxXSm1PVFl0TmpoaFpUTXhOMkZtWm1GaiJ9.FrpxDQ.tZA8EPMUEdNgm_tmv9gE_-zeUYc;tracker_device=1b23936a-a298-427f-bf96-68ae317affac'),
 ));
 $response = curl_exec($curl);
 curl_close($curl);
@@ -195,7 +195,7 @@ CURLOPT_MAXREDIRS => 10,
 CURLOPT_TIMEOUT => 30,
 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 CURLOPT_CUSTOMREQUEST => "POST",
-CURLOPT_HTTPHEADER => ["accept: */*","authorization: Basic WjJFMkZHMFk1VFQwVk5JWDpCSDJHQ2FLTndQUDVkdkxvQmdtT2NIalJWWHFPWFlJRQ==","content-type: application/json"],
+CURLOPT_HTTPHEADER => ["accept: */*","authorization: Basic {public_api_key}:{private_api_key}==","content-type: application/json"],
 ]);
 $order_response = curl_exec($curl_order);
 $order_err = curl_error($curl_order);
