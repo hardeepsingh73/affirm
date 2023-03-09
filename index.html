@@ -104,8 +104,7 @@
         affirm.checkout(data);
         affirm.checkout.open();
     });
-});</code> 
-                                            </pre>
+});</code></pre>
                                 </span>
                             </div>
                         </li>
@@ -126,8 +125,7 @@ API Details     <a href="https://sandbox.affirm.com/dashboard/apikeys">https://s
                             ********
 Temp Number     202-555-0108
 OTP             1234
-</code> 
-</pre>
+</code></pre>
                                 </span>
                             </div>
                         </li>
@@ -150,8 +148,24 @@ $data = array(
 "status" => $status,
 "checkout_token" => $checkout_token
 );
-$db->insert ('Your Table Name', $data);</code> 
-                                                            </pre>
+$db->insert ('Your Table Name', $data);</code></pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">To Convert Your Curl Code Into Php<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">Open PostMan Software, and click on import 
+than click on raw paste your curl code 
+change variable values 
+than click on code icon 
+then copy your php code 
+
+if you have no postman than go 
+https://www.postman.com/ 
+hare you can download postman</code></pre>
                                 </span>
                             </div>
                         </li>
@@ -164,8 +178,7 @@ $db->insert ('Your Table Name', $data);</code>
 -X POST
 -u "{public_api_key}:{private_api_key}"
 -H "Content-Type: application/json"
--d '{"transaction_id": "{checkout_token}","order_id": "{order_id}"}'</code> 
-                                                </pre>
+-d '{"transaction_id": "{checkout_token}","order_id": "{order_id}"}'</code></pre>
                                 </span>
                             </div>
                         </li>
@@ -174,12 +187,12 @@ $db->insert ('Your Table Name', $data);</code>
                                 <span class="text">Capture Payment Code<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">curl https://sandbox.affirm.com/api/v1/transactions/{id}/capture
+                                    <pre
+                                        class="line-numbers"><code class="language-javascript copied">curl https://sandbox.affirm.com/api/v1/transactions/{id}/capture
 -X POST
 -u {public_api_key}:{private_api_key}"
 -H "Content-Type: application/json"
--d '{"order_id": "{order_id}", "shipping_carrier": "USPS", "shipping_confirmation": "1Z23223", "amount":49999}'</code> 
-                                                                        </pre>
+-d '{"order_id": "{order_id}", "shipping_carrier": "USPS", "shipping_confirmation": "1Z23223", "amount":49999}'</code></pre>
                                 </span>
                             </div>
                         </li>
