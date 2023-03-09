@@ -26,12 +26,12 @@
                     <ul>
                         <li id="cmnFunc">
                             <div>
-                                <span class="text"> JavaScript Code </span>
+                                <span class="text"> JavaScript Code <img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript">                    ********
-            Required jQuery For This Code
-                    ********
-$(document).ready(function () {
+                                    <pre
+                                        class="line-numbers"><code class="language-javascript">                Required jQuery For This Code</code></pre>
+                                    <pre class="line-numbers"><code class="language-javascript copied">$(document).ready(function () {
     _affirm_config = {
         public_api_key: "Your Api Key",
         script: "https://cdn1-sandbox.affirm.com/js/v2/affirm.js"
@@ -115,13 +115,12 @@ $(document).ready(function () {
                     <ul>
                         <li id="cmnFunc">
                             <div>
-                                <span class="text"> Affirm Links </span>
+                                <span class="text"> Affirm Links <img src="./assets/copy-solid.svg" class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript">Documentation   <a href="https://docs.affirm.com/platforms/docs/platforms-quickstart">https://docs.affirm.com/platforms/docs/platforms-quickstart</a>
+                                    <pre class="line-numbers"><code class="language-javascript copied">Documentation   <a href="https://docs.affirm.com/platforms/docs/platforms-quickstart">https://docs.affirm.com/platforms/docs/platforms-quickstart</a>
 Dashboard       <a
                                             href="https://sandbox.affirm.com/dashboard/home">https://sandbox.affirm.com/dashboard/home</a>
 API Details     <a href="https://sandbox.affirm.com/dashboard/apikeys">https://sandbox.affirm.com/dashboard/apikeys</a>
-                                
                             ********
                 Use Below Details For Testing Purpose
                             ********
@@ -134,9 +133,10 @@ OTP             1234
                         </li>
                         <li id="cmnFunc">
                             <div>
-                                <span class="text"> PHP Code To Save Details In DataBase</span>
+                                <span class="text"> PHP Code To Save Details In DataBase<img
+                                        src="./assets/copy-solid.svg" class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript">if (!isset($_POST['checkout_token'])) {
+                                    <pre class="line-numbers"><code class="language-javascript copied">if (!isset($_POST['checkout_token'])) {
 $_POST['checkout_token'] = 'null';
 $status = 'failed';
 } else {
@@ -157,9 +157,10 @@ $db->insert ('Your Table Name', $data);</code>
                         </li>
                         <li id="cmnFunc">
                             <div>
-                                <span class="text">Authorize Transaction Code</span>
+                                <span class="text">Authorize Transaction Code<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript">$curl = curl_init();
+                                    <pre class="line-numbers"><code class="language-javascript copied">$curl = curl_init();
 curl_setopt_array($curl, array(
 CURLOPT_URL => 'https://sandbox.affirm.com/api/v1/transactions',
 CURLOPT_RETURNTRANSFER => true,
@@ -182,9 +183,10 @@ $order_id = $response_text['id'];</code>
                         </li>
                         <li id="cmnFunc">
                             <div>
-                                <span class="text">Capture Payment Code</span>
+                                <span class="text">Capture Payment Code<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript">$curl_order = curl_init();
+                                    <pre class="line-numbers"><code class="language-javascript copied">$curl_order = curl_init();
 curl_setopt_array($curl_order, [
 CURLOPT_URL => "https://sandbox.affirm.com/api/v2/charges/".$order_id."/capture",
 CURLOPT_RETURNTRANSFER => true,
@@ -206,8 +208,20 @@ curl_close($curl_order);</code>
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
-        </script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".copy").click(function () {
+                var temp = $("<input>");
+                $("body").append(temp);
+                temp.val($(this).parent().parent().find(".copied").text()).select();
+                document.execCommand("copy");
+                temp.remove();
+            });
+        });
+    </script>
 </body>
 
 </html>
