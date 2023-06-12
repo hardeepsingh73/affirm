@@ -40,8 +40,8 @@
                                 <span class="text">Install Composer<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">https://getcomposer.org/Composer-Setup.exe
-Run This Setup File To Install Composer
+                                    <pre class="line-numbers"><code class="language-javascript copied">// Run This Setup File To Install Composer 
+https://getcomposer.org/Composer-Setup.exe
 </code>
 
 </pre>
@@ -53,8 +53,8 @@ Run This Setup File To Install Composer
                                 <span class="text"> Laravel Package Installation <img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">composer global require laravel/installer
-Run This Command In CMD To Install Laravel Package
+                                    <pre class="line-numbers"><code class="language-javascript copied">// Run This Command In CMD To Install Laravel Package
+composer global require laravel/installer
 </code>
 
 </pre>
@@ -68,8 +68,9 @@ Run This Command In CMD To Install Laravel Package
                                 <span class="text">Create Laravel Project<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">laravel new Project-Name
-Run This Command In CMD Where you Want To Install Laravel Project</code>
+                                    <pre class="line-numbers"><code class="language-javascript copied">// Run This Command In CMD Where you Want To Install Laravel Project
+laravel new Project-Name
+</code>
 
 </pre>
                                 </span>
@@ -80,25 +81,23 @@ Run This Command In CMD Where you Want To Install Laravel Project</code>
                                 <span class="text">Loops In Laravel<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
-    @for ($Variable-Name = 0; $Variable-Name < 10; $Variable-Name++) 
-        The current value is {{ $Variable-Name }} 
-    @endfor 
+                                    <pre class="line-numbers"><code class="language-javascript copied">@for ($Variable-Name = 0; $Variable-Name < 10; $Variable-Name++) 
+    The current value is {{ $Variable-Name }} 
+@endfor 
 
-    @foreach ($Variable-Name as $Variable-Name) 
-        {{$Variable-Name}}
-    @endforeach
+@foreach ($Variable-Name as $Variable-Name) 
+    {{$Variable-Name}}
+@endforeach
 
-    @forelse ($Variable-Name as $Variable-Name)
-        {{ $Variable-Name}}
-    @empty
-        Variable-Name empty
-    @endforelse
+@forelse ($Variable-Name as $Variable-Name)
+    {{ $Variable-Name}}
+@empty
+    Variable-Name empty
+@endforelse
 
-    @while (Condition to be check)
-        //code to be excuted...
-    @endwhile
-&lt;/div>
+@while (Condition to be check)
+    //code to be excuted...
+@endwhile
 </code>
 
 </pre>
@@ -110,11 +109,9 @@ Run This Command In CMD Where you Want To Install Laravel Project</code>
                                 <span class="text">HasSection In Laravel<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
-    @hasSection('navigation')
-        @yield('navigation')
-    @endif
-&lt;/div>
+                                    <pre class="line-numbers"><code class="language-javascript copied">@hasSection('navigation')
+    @yield('navigation')
+@endif
 </code>
 
 </pre>
@@ -126,20 +123,18 @@ Run This Command In CMD Where you Want To Install Laravel Project</code>
                                 <span class="text">Switch In Laravel<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
-    @switch($Variable-Name)
-        @case(1)
-            First case...
-        @break
+                                    <pre class="line-numbers"><code class="language-javascript copied">@switch($Variable-Name)
+    @case(1)
+        First case...
+    @break
 
-        @case(2)
-            Second case...
-        @break
+    @case(2)
+        Second case...
+    @break
 
-        @default
-            Default case...
-    @endswitch
-&lt;/div>
+    @default
+        Default case...
+@endswitch
 </code>
 
 </pre>
@@ -248,15 +243,13 @@ DB_PASSWORD     =   Your Database Password
                                 <span class="text">If Condition In Laravel<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
-    @if (Condition to be check)
-        //code to be excuted...
-    @elseif (Condition to be check)
-        //code to be excuted...
-    @else
-        //code to be excuted...
-    @endif
-&lt;/div>
+                                    <pre class="line-numbers"><code class="language-javascript copied">@if (Condition to be check)
+    //code to be excuted...
+@elseif (Condition to be check)
+    //code to be excuted...
+@else
+    //code to be excuted...
+@endif
 </code>
                         
 </pre>
@@ -268,11 +261,9 @@ DB_PASSWORD     =   Your Database Password
                                 <span class="text">Isset In Laravel<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
-    @isset($Variable-Name)
-        // $Variable-Name is defined and is not null...
-    @endisset
-&lt;/div>
+                                    <pre class="line-numbers"><code class="language-javascript copied">@isset($Variable-Name)
+    // $Variable-Name is defined and is not null...
+@endisset
 </code>
 
 </pre>
@@ -284,11 +275,9 @@ DB_PASSWORD     =   Your Database Password
                                 <span class="text">Empty In Laravel<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
-    @empty($Variable-Name)
-        // $Variable-Name is "empty"...
-    @endempty
-&lt;/div>
+                                    <pre class="line-numbers"><code class="language-javascript copied">@empty($Variable-Name)
+    // $Variable-Name is "empty"...
+@endempty
 </code>
 
 </pre>
@@ -300,11 +289,9 @@ DB_PASSWORD     =   Your Database Password
                                 <span class="text">Auth In Laravel<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
-    @auth
-        // The user is authenticated...
-    @endauth
-&lt;/div>
+                                    <pre class="line-numbers"><code class="language-javascript copied">@auth
+    // The user is authenticated...
+@endauth
 </code>
 
 </pre>
@@ -315,11 +302,9 @@ DB_PASSWORD     =   Your Database Password
                             <div>
                                 <span class="text">PHP In Laravel<img src="./assets/copy-solid.svg" class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
-    @php
-        //code to be excuted...
-    @endphp
-&lt;/div>
+                                    <pre class="line-numbers"><code class="language-javascript copied">@php
+    //code to be excuted...
+@endphp
 </code>
 
 </pre>
@@ -331,9 +316,7 @@ DB_PASSWORD     =   Your Database Password
                                 <span class="text">Include In Laravel<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
-                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
-    @include('file to be incude')
-&lt;/div>
+                                    <pre class="line-numbers"><code class="language-javascript copied">@include('file to be incude')
 </code>
 
 </pre>
@@ -381,6 +364,23 @@ DB_PASSWORD     =   Your Database Password
     session()->flush();
 </code>
 
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Laravel Mailgun Setup<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">MAIL_DRIVER=mailgun
+MAIL_HOST=smtp.mailgun.org
+MAIL_PORT=587
+MAIL_USERNAME=Username
+MAIL_PASSWORD=Password
+MAIL_ENCRYPTION=tls
+</code>
+                        
 </pre>
                                 </span>
                             </div>
