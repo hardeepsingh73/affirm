@@ -75,6 +75,138 @@ Run This Command In CMD Where you Want To Install Laravel Project</code>
                                 </span>
                             </div>
                         </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Loops In Laravel<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
+    @for ($Variable-Name = 0; $Variable-Name < 10; $Variable-Name++) 
+        The current value is {{ $Variable-Name }} 
+    @endfor 
+
+    @foreach ($Variable-Name as $Variable-Name) 
+        {{$Variable-Name}}
+    @endforeach
+
+    @forelse ($Variable-Name as $Variable-Name)
+        {{ $Variable-Name}}
+    @empty
+        Variable-Name empty
+    @endforelse
+
+    @while (Condition to be check)
+        //code to be excuted...
+    @endwhile
+&lt;/div>
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">HasSection In Laravel<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
+    @hasSection('navigation')
+        @yield('navigation')
+    @endif
+&lt;/div>
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Switch In Laravel<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
+    @switch($Variable-Name)
+        @case(1)
+            First case...
+        @break
+
+        @case(2)
+            Second case...
+        @break
+
+        @default
+            Default case...
+    @endswitch
+&lt;/div>
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Accessing The Current URL<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">// Get the current URL without the query string...
+    {{url()->current()}}
+
+// Get the current URL including the query string...
+    {{url()->full()}}
+
+// Get the full URL for the previous request...
+    {{url()->previous()}}
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Retrieving The Authenticated User<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">// Retrieve the currently authenticated user...
+    $user = Auth::user();
+
+// Retrieve the currently authenticated user's ID...
+    $id = Auth::id();
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Steps to generate the Migration<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">php artisan make:migration create_posts_table - -create="posts"
+To view the migration table, open the directory "database\migrations"
+
+// Suppose I added two more columns shown in the below code:
+public function up()
+{
+    Schema::create('posts', function (Blueprint $table) {
+        $table->bigIncrements('id');
+        $table->string('title')->unique();
+        $table->text('body');
+        $table->timestamps();
+    }); 
+}
+// Enter the migrate command in Cmd window
+    php artisan migrate.
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-6 left">
@@ -113,13 +245,33 @@ DB_PASSWORD     =   Your Database Password
                         </li>
                         <li id="cmnFunc">
                             <div>
-                                <span class="text">Foreach In Laravel<img src="./assets/copy-solid.svg"
+                                <span class="text">If Condition In Laravel<img src="./assets/copy-solid.svg"
                                         class="copy"></span>
                                 <span class="function">
                                     <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
-    @foreach ($users as $user)
-        Hello, {{ $user->name }} &lt;br/>
-    @endforeach
+    @if (Condition to be check)
+        //code to be excuted...
+    @elseif (Condition to be check)
+        //code to be excuted...
+    @else
+        //code to be excuted...
+    @endif
+&lt;/div>
+</code>
+                        
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Isset In Laravel<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
+    @isset($Variable-Name)
+        // $Variable-Name is defined and is not null...
+    @endisset
 &lt;/div>
 </code>
 
@@ -127,7 +279,112 @@ DB_PASSWORD     =   Your Database Password
                                 </span>
                             </div>
                         </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Empty In Laravel<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
+    @empty($Variable-Name)
+        // $Variable-Name is "empty"...
+    @endempty
+&lt;/div>
+</code>
 
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Auth In Laravel<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
+    @auth
+        // The user is authenticated...
+    @endauth
+&lt;/div>
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">PHP In Laravel<img src="./assets/copy-solid.svg" class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
+    @php
+        //code to be excuted...
+    @endphp
+&lt;/div>
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Include In Laravel<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
+    @include('file to be incude')
+&lt;/div>
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Session In Laravel<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">// Retrieving All Session Data...
+    $data = session()->all();
+// Determining If An Item Exists In The Session
+    @if (session()->has('users')) 
+        // code to be excuted...
+    @endif
+
+    @if (session()->exists('users'))
+        // code to be excuted...
+    @endif
+
+    @if (session()->missing('users'))
+        // code to be excuted...
+    @endif
+
+// Storing Data
+    // Via a request instance...
+        session()->put('key', 'value');
+    
+    // Via the global "session" helper...
+        session(['key' => 'value']);
+
+// Pushing To Array Session Values
+    session()->push('user.teams', 'developers');
+
+// Deleting An Item
+    session()->pull('key', 'default');
+
+    // Forget a single key...
+    session()->forget('name');
+    // Forget multiple keys...
+    session()->forget(['name', 'status']);
+    
+    session()->flush();
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
