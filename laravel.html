@@ -37,8 +37,8 @@
                         </li>
                         <li id="cmnFunc">
                             <div>
-                                <span class="text">Install Composer<img src="./assets/copy-solid.svg"
-                                        class="copy"></span>
+                                <span class="text">Install Composer<img src="./assets/copy-solid.svg" class="copy"><span
+                                        id="copy_tooltip" aria-live="assertive" role="tooltip"></span></span>
                                 <span class="function">
                                     <pre class="line-numbers"><code class="language-javascript copied">// Run This Setup File To Install Composer 
 https://getcomposer.org/Composer-Setup.exe
@@ -395,7 +395,13 @@ MAIL_ENCRYPTION=tls
     <script>
         $(document).ready(function () {
             $(".copy").click(function () {
+                $(".copied").each(function () {
+                    $(this).removeClass("copied");
+                    $(this).attr('src', './assets/copy-solid.svg');
+                })
                 var temp = $("<input>");
+                $(this).addClass("copied");
+                $(this).attr('src', './assets/clipboard-check-solid.svg');
                 $("body").append(temp);
                 temp.val($(this).parent().parent().find(".copied").text()).select();
                 document.execCommand("copy");
