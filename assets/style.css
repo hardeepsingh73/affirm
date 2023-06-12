@@ -98,3 +98,8 @@ img.copy {
     transform: translateY(-50%);
     cursor: pointer;
 }
+@media(max-width:756px) {
+    body {
+        padding: 10px !important;
+    }
+}
