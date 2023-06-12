@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/style.css" rel="stylesheet">
+    <link href="./assets/prism/prism.css" rel="stylesheet">
+    <link href="./assets/line-number/line-number.css" rel="stylesheet">
+    <script src="./assets/prism/prism.js">
+    </script>
+    <script src="./assets/line-number/line-number.js">
+    </script>
+    <title> Laravel Code Snippets
+    </title>
+</head>
+
+<body>
+    <div class="container-fluid wordpressFunctionAP">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 right">
+                    <ul>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text"> Laravel Documentation<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">https://laravel.com/docs/10.x
+</code>
+                                    </pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Install Composer<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">https://getcomposer.org/Composer-Setup.exe
+Run This Setup File To Install Composer
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text"> Laravel Package Installation <img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">composer global require laravel/installer
+Run This Command In CMD To Install Laravel Package
+</code>
+
+</pre>
+
+                                    </pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Create Laravel Project<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">laravel new Project-Name
+Run This Command In CMD Where you Want To Install Laravel Project</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 left">
+                    <ul>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Environment Configuration<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">Open Env File Present In root Directory And Enter Your Details 
+
+APP_NAME        =   Project-Name
+APP_URL         =   Project-Url
+
+DB_CONNECTION   =   Your Database Connection
+DB_HOST         =   Your Database Host
+DB_PORT         =   Your Database Port
+DB_DATABASE     =   Your Database Name
+DB_USERNAME     =   Your Database Username
+DB_PASSWORD     =   Your Database Password
+</code>
+                                    </pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Echo In Laravel<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">{{ $Variable-Name }}</code>
+                        
+</pre>
+                                </span>
+                            </div>
+                        </li>
+                        <li id="cmnFunc">
+                            <div>
+                                <span class="text">Foreach In Laravel<img src="./assets/copy-solid.svg"
+                                        class="copy"></span>
+                                <span class="function">
+                                    <pre class="line-numbers"><code class="language-javascript copied">&lt;div>
+    @foreach ($users as $user)
+        Hello, {{ $user->name }} &lt;br/>
+    @endforeach
+&lt;/div>
+</code>
+
+</pre>
+                                </span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".copy").click(function () {
+                var temp = $("<input>");
+                $("body").append(temp);
+                temp.val($(this).parent().parent().find(".copied").text()).select();
+                document.execCommand("copy");
+                temp.remove();
+            });
+        });
+    </script>
+</body>
+
+</html>
