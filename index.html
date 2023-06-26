@@ -206,16 +206,14 @@ hare you can download postman</code></pre>
     <script>
         $(document).ready(function () {
             $(".copy").click(function () {
-                $(".copied").each(function () {
-                    $(this).removeClass("copied");
-                    $(this).attr('src', './assets/copy-solid.svg');
-                })
                 var temp = $("<input>");
-                $(this).addClass("copied");
-                $(this).attr('src', './assets/clipboard-check-solid.svg');
                 $("body").append(temp);
-                temp.val($(this).parent().parent().find(".copied").text()).select();
+                let closestLi = $(this).closest(".cmnFunc");
+                let selectedText = closestLi.find(".copied").text();
+                let copiedText = temp.val(selectedText).select();
                 document.execCommand("copy");
+                $(".copy").attr('src', './assets/copy-solid.svg');
+                $(this).attr('src', './assets/clipboard-check-solid.svg');
                 temp.remove();
             });
         });
